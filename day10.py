@@ -42,7 +42,7 @@ class Bot():
             self.high_target[self.high].get_chip(max_chip)
             self.low_target[self.low].get_chip(min_chip)
             if max_chip in ['61', '17'] and min_chip in ['61', '17']:
-                print("Answer is", self.number)
+                print("Answer for part 1 is", self.number)
             self.chip1, self.chip2 = None, None
 
 
@@ -93,3 +93,6 @@ with open('day10_input.txt', 'r') as input_file:
         parse_line(line)
 
     process_commands()
+
+print("Answer for part 2 is", int(
+    outputs['0'].chip) * int(outputs['1'].chip) * int(outputs['2'].chip))
